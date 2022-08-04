@@ -1,23 +1,35 @@
-import logo from './logo.svg';
+/* eslint-disable array-callback-return */
 import './App.css';
+import { useState, useEffect} from 'react';
 
 function App() {
+
+  const [products, setProducts] = useState([0]);
+  const [busca, setBusca] = useState('');
+
+  useEffect(() => {
+    fetch('./productsCategory.json', {
+      headers: {
+        Accept: "application/json"
+      }
+    }).then(res => res.json())
+    .then(res => setProducts(res.data.nodes));
+  }, []);
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <input type='text'
+      value={busca}
+      onChange={(event) => setBusca(event.target.value)}/>
+      {
+        (products.map(product => {
+          return (
+            <div className='Wrapper'>
+              <span>{product.name}</span>
+            </div>
+          )
+        }))
+      }
     </div>
   );
 }
