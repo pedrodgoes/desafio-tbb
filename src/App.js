@@ -4,7 +4,7 @@ import { useState, useEffect} from 'react';
 
 function App() {
 
-  const [products, setProducts] = useState([0]);
+  const [products, setProducts] = useState([]);
   const [busca, setBusca] = useState('');
 
   useEffect(() => {
@@ -21,15 +21,20 @@ function App() {
       <input type='text'
       value={busca}
       onChange={(event) => setBusca(event.target.value)}/>
-      {
+    
+    <div className='Content'>
+    {
         (products.map(product => {
           return (
-            <div className='Wrapper'>
-              <span>{product.name}</span>
+            <div className='Wrapper' key={product.id}>
+              <span>{product.name}</span><br />
+              Categoria: <span>{product.category.name}</span><br />
+              <img src={product.images[0].asset.url} alt='qqq'/>
             </div>
           )
         }))
       }
+    </div>
     </div>
   );
 }
