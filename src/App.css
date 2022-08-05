@@ -10,8 +10,9 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  height: 100vh;
+  height: 100%;
   padding-left: 0px;
+  background-color: rgb(190, 248, 167);
 }
 
 .Wrapper {
@@ -20,6 +21,10 @@
   align-items: center;
   justify-content: center;
   text-align: justify;
+  border: 3px solid rgb(21, 51, 221);
+  border-radius: 4px;
+  background-color: white;
+  height: 100%;
 }
 
 .Content {
@@ -30,10 +35,19 @@
   );
   list-style: none;
   grid-gap: 1.5rem;
+  padding: 20px;
 }
 
 .Content img {
   max-width: 100%;
+}
+
+.Category {
+  color: rgb(26, 168, 7);
+}
+
+.Name {
+  padding: 2px 20px;
 }
 
 input {

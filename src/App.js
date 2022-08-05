@@ -7,6 +7,8 @@ function App() {
   const [products, setProducts] = useState([]);
   const [busca, setBusca] = useState('');
 
+  console.log(busca)
+
   useEffect(() => {
     fetch('./productsCategory.json', {
       headers: {
@@ -18,18 +20,20 @@ function App() {
   
   return (
     <div className="App">
-      <input type='text'
+      <div>
+      Categoria: <input type='text'
       value={busca}
       onChange={(event) => setBusca(event.target.value)}/>
+      </div>
     
     <div className='Content'>
     {
         (products.map(product => {
           return (
             <div className='Wrapper' key={product.id}>
-              <span>{product.name}</span><br />
-              Categoria: <span>{product.category.name}</span><br />
-              <img src={product.images[0].asset.url} alt='qqq'/>
+              <span className='Name'>{product.name}</span><br />
+              Categoria: <span className='Category'>{product.category.name}</span><br />
+              <img src={product.images[0].asset.url} alt='img'/>
             </div>
           )
         }))

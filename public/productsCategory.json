@@ -172,23 +172,6 @@
           }
         },
         {
-          "name": "Rexona Women Antitranspirante Barra Nutritive 50gr",
-          "shortDescription": "Rexona Nutritive enriquece tus axilas con nutrientes fundamentales, ayudando a mejorar la textura natural de la piel",
-          "id": "-cb88855c-8325-5a05-8de8-bb629b83c8c6",
-          "images": [
-            {
-              "alt": "Envase de Antitranspirante en Barra Rexona Women Nutritive 50gr",
-              "asset": {
-                "url": "https://cdn.sanity.io/images/27438tds/rexona-staging-ar/fd66738c466729c6427444140399b2a72c094471-3000x3000.tif?rect=209,0,4582,5000&w=362&h=395&q=80&auto=format"
-              }
-            }
-          ],
-          "category": {
-            "_id": "4c2e58a1f57afcacb9720beade4fa76b68510a779425e954d8c693b3",
-            "name": "Barra"
-          }
-        },
-        {
           "name": "Rexona Jabón Líquido Antibacterial Fresh 220ml",
           "shortDescription": "Elimina el 99,9% de las bacterias y sus ingredientes brindan beneficios de una limpieza profunda y una frescura energizante.",
           "id": "-7199d522-3d5e-59a2-a839-07507d9db125",
